@@ -33,7 +33,7 @@ h4  {
 .btn {
     & a {
       background: #00BD4C;
-      box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
+      box-shadow: 0 0 4px rgba(0, 0, 0, 0.25);
       border-radius: 28px;
       text-transform: uppercase;
       font: 400 22px/26px Oswald, sans-serif;
@@ -377,20 +377,172 @@ h4  {
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
   border-radius: 15px;
   text-align: center;
-  padding: 40px 90px;
+  padding: 40px 90px 70px;
   max-width: 630px;
   margin: 70px auto 20px;
+
   & p{
     font: 400 32px/39px "Open Sans", sans-serif;
     color: white;
     margin-bottom: 30px;
   }
+  & a{
+    color: #404040;
+  }
+  &__btn{
+    & .btn a{
+      color: #404040;
+      background-color: white;
+    }
+  }
 }
+
+.people{
+
+  &__row{
+    margin-bottom: 70px;
+  }
+
+  h4{
+    margin-bottom: 20px;
+  }
+  & p{
+    float: left;
+  }
+  &__btn{
+    float: right;
+  }
+
+  &__photo{
+    font-size: 0;
+    line-height: 0;
+
+    & > *{
+      display: inline-block;
+      width: 20%;
+      height: 320px;
+
+      & img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+      }
+    }
+  }
+}
+
+.connect{
+  background-color: #F5F5F5;
+  padding: 70px 0 60px;
+
+  p{
+    text-align: center;
+    margin-bottom: 70px;
+  }
+
+  h4{
+    margin-bottom: 17px;
+    span{
+      color: #00bd4c;
+    }
+  }
+  &__form {
+    text-align: center;
+
+    & .form__left{
+      width: 30%;
+      margin-right: 20px;
+      display: inline-block;
+      vertical-align: top;
+      & .input{
+        & + .input{
+          margin-top: 10px;
+
+        }
+      }
+    }
+    & .form__right{
+      width: 30%;
+      display: inline-block;
+      vertical-align: top;
+    }
+
+  }
+  &__form .input input, textarea{
+    background: #FFFFFF;
+    border: 2px solid #BBBBBB;
+    border-radius: 15px;
+    padding: 20px 20px;
+    width: 100%;
+  }
+  &__form textarea{
+    height: 200px;
+  }
+}
+
+.checkbox-row{
+  display: block;
+  margin-top: 20px;
+
+  .option{
+    & + .option{
+      margin-left: 10px;
+    }
+  }
+
+  .check{
+    padding-left: 1.2em;
+  }
+
+  .check__input{
+    position: absolute;
+    -wedkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+  }
+  .check__box{
+    position: absolute;
+    margin-left: -1.2em;
+    width: 0.8em;
+    height: 0.8em;
+    border-radius: 0.05em;
+    background-color: white;
+    box-shadow: 0 0 0 0.1em #00bd4c;
+  }
+
+  //checked
+  .check__input:checked + .check__box{
+    background-color: #00bd4c;
+    background-image: url("../img/main/check.svg");
+  }
+
+  //focused
+  .check__input:focus + .check__box{
+    box-shadow:
+            0 0 0 0.2em cadetblue,
+            0 0 0 0.1em #00bd4c;
+  }
+
+  //checked focused
+  .check__input:checked:focus + .check__box{}
+
+  //disabled
+  .check__input:disabled + .check__box{
+    box-shadow: 0 0 0 0.1em gray;
+  }
+
+  //checked disabled
+  .check__input:checked:disabled + .check__box{
+    background-color: gray;
+  }
+}
+
 
 footer{
   margin-top: auto;
   min-height: 30px;
-  background-color: aqua;
+  background-color: red;
 }
 
 .slider {
