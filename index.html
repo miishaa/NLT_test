@@ -21,10 +21,24 @@
                     <img src="./img/main/logo.svg" alt="logo">
                     </a>
                 </div>
+                <div class="header__burger">
+                    <span></span>
+                </div>
                 <nav class="header__navigation">
                     <ul>
                         <li><a href="">home</a></li>
-                        <li><a href="">services</a></li>
+
+                        <li class="hover-menu">
+                            <a href="">services</a>
+                            <span class="arrow menu__arrow"></span>
+                            <ul class="sub-menu">
+                                <li class="sub-menu__item"><a href="#">Sub-1</a></li>
+                                <li class="sub-menu__item"><a href="#">Sub-2</a></li>
+                                <li class="sub-menu__item"><a href="#">Sub-3</a></li>
+                                <li class="sub-menu__item"><a href="#">Sub-4</a></li>
+                                <li class="sub-menu__item"><a href="#">Sub-5</a></li>
+                            </ul>
+                        </li>
                         <li><a href="">about us</a></li>
                         <li><a href="">plug</a></li>
                     </ul>
@@ -36,7 +50,13 @@
                             get in touch
                         </a>
                     </div>
+                    <div class="header__btn-mobile">
+                        <picture>
+                            <img src="./img/main/mobilemail.svg" alt="">
+                        </picture>
+                    </div>
                 </div>
+
             </div>
         </div>
     </header>
@@ -237,12 +257,15 @@
                 <div class="people__img">
                     <img src="./img/main/people/5.jpg" alt="">
                 </div>
+                <div class="people__img">
+                    <img src="./img/main/people/6.jpg" alt="">
+                </div>
             </div>
         </section>
         <section class="connect">
             <div class="container">
                 <h4>
-                    Connect <span>with us</span>
+                    Connect <br> <span>with us</span>
                 </h4>
                 <p>
                     Leave your E-mail and we’ll answer to you as soon as will see your request
@@ -250,13 +273,13 @@
                 <form class="connect__form " action="">
                     <div class="form__left">
                         <div class="input">
-                            <input type="name" placeholder="Name">
+                            <input type="name" required placeholder="Name">
                         </div>
                         <div class="input">
-                            <input type="email" placeholder="Email">
+                            <input type="email" required placeholder="Email">
                         </div>
                         <div class="input">
-                            <input type="tel" placeholder="Phone">
+                            <input type="tel" required placeholder="Phone">
                         </div>
                     </div>
                     <div class="form__right">
@@ -286,12 +309,44 @@
                             <span>test</span>
                         </label>
                     </div>
+                    <div class="form__btn">
+                        <button type="submit">
+                            SUBMIT
+                            <img src="./img/main/arrow.svg" alt="arrow">
+                        </button>
+                    </div>
+                    <div class="call-us">
+                        or call us <a href="tel:08-30-94-84">08-30-94-84</a>
+                    </div>
 
                 </form>
             </div>
         </section>
     </main>
-    <footer class="footer"></footer>
+    <footer class="footer">
+        <div class="footer__row">
+            <div class="footer__contact">
+                <h6>Contact us</h6>
+                <div class="contact__row">
+                    <address>
+                        Drottninggatan 88F, 111 36 Stockholm
+                    </address>
+                    <a href="mailto:info@startupjuristerna.se">info@startupjuristerna.se</a>
+                    <a href="tel:08-30-94-84">08-30-94-84</a>
+                </div>
+            </div>
+            <div class="footer__media">
+                <h6>Social media</h6>
+                <a href="" class="instagram">Instagram</a>
+                <a href="" class="facebook">Facebook</a>
+            </div>
+            <div class="footer__general">
+                <h6>general information</h6>
+                <a href="" class="privacy">Privacy Policy</a>
+                <a href="" class="cookie">Cookie Policy</a>
+            </div>
+        </div>
+    </footer>
 </div>
 <script src="js/slick.min.js"></script>
 <script src="js/script.min.js"></script>

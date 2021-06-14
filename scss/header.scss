@@ -1,0 +1,225 @@
+
+.header-row{
+  display: grid;
+  grid-template-columns: 30% 50% 20% ;
+  @media (max-width: 1200px) {
+    grid-template-columns: auto auto 210px;
+  }
+  @media (max-width: 950px){
+    grid-template-columns: 75px auto auto;
+  }
+  @media (max-width: 767px){
+    grid-template-columns: auto auto auto;
+  }
+
+}
+.header{
+  background: #FFFFFF;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  @media (max-width: 767px){
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 20;
+  }
+
+  &__logo{
+    align-self: center;
+    z-index: 10;
+    @media (max-width: 767px){
+      align-self: start;
+      text-align: center;
+    }
+    & img{
+    }
+  }
+
+
+  &__navigation{
+    @media (max-width: 950px){
+      justify-self: end;
+    }
+    @media (max-width: 767px) {
+      position: fixed;
+      overflow: auto;
+      top: -100%;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: teal;
+      padding: 70px 50px 0;
+      transition: all .3s ease-in-out;
+      &.active{
+        top: 0;
+      }
+
+    }
+    & ul li{
+      display: inline-block;
+      margin: 0 32px;
+
+      @media (max-width: 767px) {
+        display: block;
+      }
+
+      & a{
+        text-transform: uppercase;
+        color: black;
+        font: 400 18px/21px Oswald,sans-serif;
+        display: block;
+        padding: 23px 0px;
+        position: relative;
+        cursor: pointer;
+
+        &:hover:after,
+        &:focus:after{
+          width: 100%;
+        }
+        &:after{
+          content: "";
+          display: block;
+          position: absolute;
+          bottom: 15px;
+          right: 0;
+          height: 3px;
+          width: 0;
+          background-color: #00BD4C;
+          transition: width .3s ease-out;
+        }
+      }
+    }
+  }
+
+  .header__burger{
+    display: none;
+    z-index: 3;
+
+    @media (max-width: 767px) {
+      display: block;
+      position: relative;
+      width: 30px;
+      height: 20px;
+      align-self: center;
+      justify-content: end;
+      z-index: 3;
+      order: -1;
+
+      & span{
+        position: absolute;
+        background-color: #00bd4c;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        top: 9px;
+        transition: all .3s ease;
+      }
+
+      &:before,
+      &:after{
+        content: "";
+        background-color: #00bd4c;
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        left: 0;
+        transition: all .3s ease;
+      }
+      &:before{
+        top:0;
+      }
+      &:after{
+        bottom: 0;
+      }
+
+      &.active:before{
+        transform: rotate(45deg);
+        top: 9px;
+      }
+      &.active:after{
+        transform: rotate(-45deg);
+        bottom: 9px;
+      }
+      &.active span{
+        transform: scale(0);
+      }
+
+    }
+  }
+
+  &__btn-mobile{
+    display: none;
+    @media (max-width: 950px) {
+      display: block;
+    }
+  }
+  &__btn {
+    text-align: right;
+    align-self: center;
+    z-index: 3;
+
+    & .btn{
+      @media (max-width: 950px) {
+        display: none;
+      }
+    }
+  }
+}
+
+.hover-menu{
+  position: relative;
+
+  &:hover .sub-menu{
+    display: block;
+    @media (max-width: 767px) {
+      display: none;
+    }
+  }
+  &:hover .arrow{
+    border-top: 10px solid #00bd4c;
+    transform: rotate(180deg);
+    @media (max-width: 767px) {
+      display: none;
+    }
+  }
+}
+
+ul.sub-menu{
+  display: none;
+  position: absolute;
+  border: 2px solid #00BD4C;
+  border-radius: 15px;
+  background-color: white;
+  left: -20px;
+  top: 55px;
+  min-width: 200px;
+
+  & > .sub-menu__item{
+    display: block;
+    padding: 20px 20px 0;
+    margin-right: 0;
+    margin-left: 0;
+    z-index: 10;
+  }
+}
+
+.arrow{
+  width: 0;
+  height: 0;
+  border-top: 10px solid black;
+  border-right: 10px solid transparent;
+  border-left: 10px solid transparent;
+  position: absolute;
+  top: 45%;
+  right: -30px;
+  transition: all .2s ease-in-out;
+  @media (max-width: 767px) {
+    display: none;
+  }
+}
+
+body.lock{
+  overflow: hidden;
+}
+
+
