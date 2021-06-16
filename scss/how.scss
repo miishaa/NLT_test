@@ -1,9 +1,9 @@
 
 .how{
-  padding: 90px 0px 40px;
+  padding: 7vw 0 0;
 
   & h4{
-    margin-bottom: 130px;
+    margin-bottom: 110px;
   }
 
   &__steps{
@@ -31,11 +31,9 @@
       position: relative;
       background-color: white;
       transition: .3s ease-in-out;
-      @media (max-width: 1300px) {
-        max-width: 500px;
-      }
+
       @media (max-width: 1200px) {
-        max-width: 450px;
+        max-width: 470px;
       }
       @media (max-width: 1100px) {
         max-width: inherit;
@@ -45,8 +43,6 @@
         text-align: justify;
       }
 
-
-
       &:hover{
         border: solid 2px #00bd4c;
       }
@@ -54,7 +50,7 @@
       &:nth-child(odd){
         float: left;
         margin-top: 190px;
-        @media (max-width: 768px) {
+        @media (max-width: 1100px) {
           margin-top: 100px;
         }
         &:after{
@@ -67,11 +63,9 @@
           border-left: 2px dotted #BBB;
           border-top: 2px dotted #bbb;
           z-index: -1;
-          @media (max-width: 1300px) {
-            right: -40%;
-          }
+
           @media (max-width: 1200px) {
-            right: -50%;
+            right: -47%;
           }
           @media (max-width: 1100px) {
             border-top: none;
@@ -87,7 +81,7 @@
         float: right;
         margin-top: 190px;
         position: relative;
-        @media (max-width: 768px) {
+        @media (max-width: 1100px) {
           margin-top: 100px;
         }
 

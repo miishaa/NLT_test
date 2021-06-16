@@ -2,11 +2,15 @@
   <library name="Generated files" type="javaScript">
     <properties>
       <sourceFilesUrls>
+        <item url="file://$PROJECT_DIR$/js/jquery.min.js" />
         <item url="file://$PROJECT_DIR$/js/script.min.js" />
+        <item url="file://$PROJECT_DIR$/js/sweetalert.min.min.js" />
       </sourceFilesUrls>
     </properties>
     <CLASSES>
+      <root url="file://$PROJECT_DIR$/js/jquery.min.js" />
       <root url="file://$PROJECT_DIR$/js/script.min.js" />
+      <root url="file://$PROJECT_DIR$/js/sweetalert.min.min.js" />
     </CLASSES>
     <SOURCES />
   </library>

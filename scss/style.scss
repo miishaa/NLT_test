@@ -12,11 +12,11 @@ body{
   overflow: hidden;
 }
 .container{
-  max-width: 1440px;
-  padding: 0 80px;
+  max-width: 1310px;
+  padding: 0 15px;
   margin: 0 auto;
-  @media (max-width: 768px) {
-    padding: 0 15px;
+  @media (max-width: 400px) {
+    padding: 0 32px;
   }
 }
 .clearfix:after{
@@ -26,6 +26,7 @@ body{
 }
 .col-25{
   width: 25%;
+
   @media (max-width: 1200px) {
     width: 50%;
   }
@@ -37,27 +38,26 @@ body{
   text-align: center;
 }
 
-h4  {
+@media (max-width: 400px) {
+  main .br, #popup .br, .services h4{
+    display: block;
+    text-align: left;
+  }
+}
+
+h4 {
   font: 600 50px/59px Oswald, sans-serif;
   text-align: center;
   text-transform: uppercase;
 }
-.btn {
-    & a {
-      background: #00BD4C;
-      box-shadow: 0 0 4px rgba(0, 0, 0, 0.25);
-      border-radius: 28px;
-      text-transform: uppercase;
-      font: 400 22px/26px Oswald, sans-serif;
-      color: white;
-      padding: 10px 29px;
-      transition: .4s ease-in-out;
-    }
-}
 
-.title {
+.banner {
   background: url("../img/main/main_background.jpg") center/cover no-repeat;
-  padding: 100px 0 163px;
+  padding: 11vw 0 10vw;
+
+  &__btn .btn{
+    padding: 13px 25px 13px 0;
+  }
 
   h1 {
     margin-bottom: 20px;
@@ -67,8 +67,12 @@ h4  {
     color: white;
     @include adaptiv-font(82, 50);
 
-    & span {
-      color: #00bd4c;
+    & span:last-child {
+      color: $primary-color;
+    }
+
+    span{
+      display: block;
     }
   }
 
@@ -80,15 +84,15 @@ h4  {
 
 
 .services{
-  background: #DCDCDC;
-  padding: 90px 0px;
+  background: $light-gray;
+  padding: 5vw 0 7vw;
 
   & h4{
-    margin-bottom: 70px;
+    margin-bottom: 4vw;
   }
 
   &__row{
-    margin-bottom: 70px;
+    margin-bottom: 20px;
   }
 
   &__item{
@@ -99,7 +103,7 @@ h4  {
   }
   &__inner{
     background: #FFFFFF;
-    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
     border-radius: 15px;
     max-width: 305px;
     padding: 30px;
@@ -114,7 +118,6 @@ h4  {
     &:hover{
       box-shadow: 0 0 15px rgb(0 0 0 / 50%);
     }
-
 
     & .attachment{
       position: absolute;
@@ -169,18 +172,6 @@ h4  {
 
     }
   }
-  &__btn a{
-    @media (max-width: 600px) {
-      display: block;
-      width: 100%;
-    }
-  }
-  &__btn .btn a:hover{
-    background: #fff;
-    border-color: #00BD4C;
-    color: #00BD4C;
-    box-shadow: none;
-  }
 }
 
 
@@ -191,7 +182,7 @@ h4  {
   text-align: center;
   padding: 40px 90px 70px;
   max-width: 630px;
-  margin: 70px auto 20px;
+  margin: 3vw auto 2vw;
   @media (max-width: 540px) {
     padding: 40px 15px 40px;
   }
@@ -203,13 +194,15 @@ h4  {
     line-height: 1.2;
 
   }
-  & a{
-    color: #404040;
-  }
-  &__btn{
-    & .btn a{
-      color: #404040;
-      background-color: white;
+
+  &__btn .btn{
+    width: 206px;
+    color: $black;
+    background-color: white;
+    &:hover{
+      color: white;
+      background-color: $primary-color;
+      border: 2px solid white;
     }
   }
 }
@@ -218,6 +211,7 @@ h4  {
 
   &__row{
     margin-bottom: 70px;
+    position: relative;
     @media (max-width: 600px) {
       margin-bottom: 30px;
     }
@@ -228,8 +222,14 @@ h4  {
   }
   & p{
     float: left;
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
     @media (max-width: 1100px) {
+      position: static;
+      transform: none;
       float: none;
+      text-align: center;
     }
   }
   &__btn{
@@ -247,10 +247,13 @@ h4  {
 
     & > *{
       display: inline-block;
-      width: 16.6%;
+      width: 16.6666667%;
       height: 320px;
-      @media (max-width: 750px) {
+      @media (max-width: 1200px) {
         width: 33.3%;
+        height: 250px;
+      }
+      @media (max-width: 600px) {
         height: 150px;
       }
 
@@ -264,22 +267,18 @@ h4  {
   }
 }
 
+//section connect
+
 .connect{
   background-color: #F5F5F5;
-  padding: 70px 0 60px;
-
-  & .container br{
-    display: none;
-    @media (max-width: 400px) {
-      display: initial;
-    }
-  }
+  padding: 6vw 0 3vw;
 
   p{
     text-align: center;
     margin-bottom: 70px;
     @media (max-width: 400px) {
       margin-bottom: 30px;
+      text-align: left;
     }
   }
 
@@ -288,8 +287,9 @@ h4  {
     @media (max-width: 400px) {
       text-align: left;
     }
-    span{
-      color: #00bd4c;
+    .thank span:last-child,
+    span:last-child{
+      color: $primary-color;
     }
   }
   &__form {
@@ -300,14 +300,14 @@ h4  {
       margin-right: 20px;
       display: inline-block;
       vertical-align: top;
-      @media (max-width: 750px) {
+
+      @media (max-width: 767px) {
         display: block;
         width: 100%;
       }
-      & .input{
-        & + .input{
+      & .input-group{
+        & + .input-group{
           margin-top: 10px;
-
         }
       }
     }
@@ -315,34 +315,42 @@ h4  {
       width: 30%;
       display: inline-block;
       vertical-align: top;
-      @media (max-width: 750px) {
+
+      @media (max-width: 767px) {
         display: block;
         width: 100%;
       }
     }
-
   }
-  &__form .input input, textarea{
-    background: #FFFFFF;
-    border: 2px solid #BBBBBB;
+  &__form .input-group{
+    position: relative;
+  }
+  & input, textarea {
+    background: #fff;
+    border: 2px solid #bbb;
     border-radius: 15px;
     padding: 20px 20px;
     width: 100%;
     font: 400 normal 20px/24px Oswald, sanf-serif;
-    @media (max-width: 750px) {
-      border-radius: 0;
-      border-bottom: 2px solid #BBBBBB;
-      border-top: none;
-      border-left: none;
-      border-right: none;
+
+    &:focus {
+      border: 2px solid $primary-color;
     }
 
+    @media (max-width: 767px) {
+      border-radius: 0;
+      border-bottom: 2px solid #BBBBBB;
+      border-top: 2px solid transparent;
+      border-left: 2px solid transparent;
+      border-right: 2px solid transparent;
+    }
   }
   &__form textarea{
     height: 225px;
     max-width: 420px;
     resize: none;
-    @media (max-width: 750px) {
+
+    @media (max-width: 767px) {
       display: block;
       max-width: 100%;
       margin-top: 10px;
@@ -350,21 +358,39 @@ h4  {
     }
   }
 }
+// active input state
+
+.label {
+  position: absolute;
+  left: 20px;
+  top: 25px;
+  color: $gray;
+  background-color: #fff;
+  z-index: 10;
+  transition: transform 150ms ease-out, font-size 150ms ease-out;
+}
+.input-group.focused > .label{
+  transform: translateY(-173%);
+  font-size: .75em;
+  color: $primary-color;
+}
+.input.filled{
+  border: 2px solid $primary-color;
+}
+
+//checkboxes
 
 .checkbox-row{
   display: block;
   margin: 20px 0;
-
   .option{
     & + .option{
       margin-left: 10px;
     }
   }
-
   .check{
     padding-left: 1.2em;
   }
-
   .check__input{
     position: absolute;
     width: 1px;
@@ -379,16 +405,18 @@ h4  {
     height: 0.8em;
     border-radius: 0.05em;
     background-color: white;
-    box-shadow: 0 0 0 0.1em #00bd4c;
+    box-shadow: 0 0 0 0.1em $primary-color;
   }
 
   //checked
+
   .check__input:checked + .check__box{
     background-color: #00bd4c;
     background-image: url("../img/main/check.svg");
   }
 
   //focused
+
   .check__input:focus + .check__box{
     box-shadow:
             0 0 0 0.2em cadetblue,
@@ -409,172 +437,16 @@ h4  {
   }
 }
 
-.form__btn{
-  & button{
-    background: #00BD4C;
-    box-shadow: 0 0 4px rgba(0, 0, 0, 0.25);
-    border-radius: 28px;
-    text-transform: uppercase;
-    font: 400 22px/26px Oswald, sans-serif;
-    color: white;
-    padding: 10px 29px;
-    transition: .4s ease-in-out;
-  }
-}
-
 .call-us{
   font: 400 18px/20px "Open Sans", sans-serif;
   margin-top: 5px;
   & a{
-    color: #00BD4C;
+    color: $primary-color;
   }
 }
 
-
-
-footer{
-  margin-top: auto;
-  background-color: #404040;
-  padding: 30px 80px;
-  @media (max-width: 768px) {
-    padding: 30px 15px;
-  }
-  h6{
-    text-transform: uppercase;
-    color: #BBBBBB;
-    font: 600 16px/19px Oswald, sans-serif;
-    margin-bottom: 13px;
-  }
-  a, address{
-    color: #BBBBBB;
-    font: 400 14px/14px 'Pontano Sans', sans-serif;
-    position: relative;
-    @media (max-width: 550px) {
-      display: block;
-    }
-  }
-  .footer__row{
-
-    display: grid;
-    grid-template-columns: 50% 25% 25%;
-    gap: 20px;
-
-
-    @media (max-width: 1150px){
-      grid-template-columns: auto auto auto;
-    }
-    @media (max-width: 810px){
-      grid-template-columns: 50% 50%;
-      grid-template-rows: 50% 50%;
-    }
-
-
-
-    .footer__contact {
-      @media (max-width: 810px){
-        grid-column: span 2;
-      }
-
-      .contact__row{
-        display: grid;
-        grid-auto-flow: column;
-        gap: 20px;
-        @media (max-width: 1150px) {
-          grid-auto-flow: row;
-
-        }
-      }
-
-      a, address{
-        padding-left: 24px;
-      }
-
-      address:after {
-        background-image: url("../img/main/footer/house.svg");
-        content: "";
-        display: block;
-        position: absolute;
-        width: 16px;
-        height: 16px;
-        top: 0;
-        left: 0;
-      }
-
-      [href="mailto:info@startupjuristerna.se"]:after {
-        background-image: url("../img/main/footer/at.svg");
-        content: "";
-        display: block;
-        position: absolute;
-        width: 16px;
-        height: 16px;
-        top: 0;
-        left: 0;
-      }
-
-      [href="tel:08-30-94-84"]:after {
-        background-image: url("../img/main/footer/call.svg");
-        background-repeat: no-repeat;
-        content: "";
-        display: block;
-        position: absolute;
-        width: 16px;
-        height: 16px;
-        top: 0;
-        left: 0;
-      }
-    }
-    .footer__media{
-      @media (max-width: 810px) {
-        align-self: center;
-      }
-      a{
-        padding-left: 24px;
-        & + a{
-          margin-left: 10px;
-          @media (max-width: 550px) {
-            margin-left: 0;
-            margin-top: 15px;
-          }
-        }
-      }
-
-      .instagram:after{
-        background-image: url("../img/main/footer/inst.svg");
-        background-repeat: no-repeat;
-        content: "";
-        display: block;
-        position: absolute;
-        width: 16px;
-        height: 16px;
-        top: 0;
-        left: 0;
-      }
-      .facebook:after{
-        background-image: url("../img/main/footer/face.svg");
-        background-repeat: no-repeat;
-        background-position: center;
-        content: "";
-        display: block;
-        position: absolute;
-        width: 16px;
-        height: 16px;
-        top: 0;
-        left: 0;
-      }
-    }
-    .footer__general{
-      @media (max-width: 810px) {
-        align-self: center;
-      }
-      a{
-        & + a{
-          margin-left: 20px;
-          @media (max-width: 550px) {
-            margin-left: 0;
-            margin-top: 15px;
-          }
-        }
-      }
-    }
-  }
+.form__btn .btn:disabled{
+  background-color: $gray;
+  pointer-events: none;
 }
+

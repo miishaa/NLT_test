@@ -6,14 +6,10 @@
     <title>Title</title>
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
-    <script
-            src="https://code.jquery.com/jquery-3.6.0.min.js"
-            integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
-            crossorigin="anonymous"></script>
 </head>
 <body>
 <div class="wrapper">
-    <header class="header">
+    <header id="header" class="header lock-padding">
         <div class="container">
             <div class="header-row">
                 <div class="header__logo">
@@ -44,39 +40,33 @@
                     </ul>
                 </nav>
                 <div class="header__btn">
-                    <div class="btn">
-                        <a href="">
-                            <img src="./img/main/letter.png" alt="letter">
-                            get in touch
-                        </a>
-                    </div>
-                    <div class="header__btn-mobile">
-                        <picture>
-                            <img src="./img/main/mobilemail.svg" alt="">
-                        </picture>
-                    </div>
+                    <a class="btn popup-link" href="#popup">
+                        get in touch
+                        <svg width="25" height="23" viewBox="0 0 25 23" fill="white" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M22.5 0.209229H2.5C1.125 0.209229 0.0125 1.46255 0.0125 2.99439L0 19.7054C0 21.2372 1.125 22.4905 2.5 22.4905H22.5C23.875 22.4905 25 21.2372 25 19.7054V2.99439C25 1.46255 23.875 0.209229 22.5 0.209229ZM22 6.1277L13.1625 12.2829C12.7625 12.5614 12.2375 12.5614 11.8375 12.2829L3 6.1277C2.6875 5.90489 2.5 5.52889 2.5 5.12504C2.5 4.19201 3.4125 3.63498 4.125 4.12238L12.5 9.9573L20.875 4.12238C21.5875 3.63498 22.5 4.19201 22.5 5.12504C22.5 5.52889 22.3125 5.90489 22 6.1277Z" />
+                        </svg>
+                    </a>
+
                 </div>
 
             </div>
         </div>
     </header>
     <main>
-        <section class="title">
+        <section class="banner">
             <div class="container">
                 <h1>
-                    TITLE IN <br>
+                   <span> TITLE IN </span>
                    <span> 2 LINE</span>
                 </h1>
                 <p>
                     Subtitle where is a description that reveals the topic
                 </p>
-                <div class="title__btn">
-                    <div class="btn">
-                        <a href="">
-                            book a FREE meeting
-                            <img src="./img/main/arrow.svg" alt="arrow">
-                        </a>
-                    </div>
+                <div class="banner__btn">
+                    <a class="btn" href="#">
+                        book a FREE meeting
+                        <div class="long-arrow-right"></div>
+                    </a>
                 </div>
             </div>
         </section>
@@ -85,27 +75,27 @@
                 <h4>OUR CLIENTS</h4>
                 <div class="slider">
                     <div>
-                    <picture class="">
+                    <picture>
                         <img src="./img/main/clients/1.png" alt="client">
                     </picture>
                     </div>
                     <div>
-                    <picture class="">
+                    <picture>
                         <img src="./img/main/clients/2.png" alt="client">
                     </picture>
                     </div>
                     <div>
-                    <picture class="">
+                    <picture>
                         <img src="./img/main/clients/3.png" alt="client">
                     </picture>
                     </div>
                     <div>
-                    <picture class="">
+                    <picture>
                         <img src="./img/main/clients/4.png" alt="client">
                     </picture>
                     </div>
                     <div>
-                    <picture class="">
+                    <picture>
                         <img src="./img/main/clients/3.png" alt="client">
                     </picture>
                     </div>
@@ -116,75 +106,76 @@
             <div class="container">
                 <h4>SERVICES</h4>
                 <div class="services__row clearfix">
-                    <div class="services__item col-25">
-                        <a href="#">
-                            <div class="services__inner">
-                                <img src="./img/main/services/1.png" alt="">
+                    <a class="services__item col-25" href="#">
+                        <figure class="services__inner">
+                            <img src="./img/main/services/1.png" alt="1">
+                            <figcaption>
                                 <h6>Brief Service Description</h6>
                                 <p>
                                     Av erfarenhet vet vi att alla startups vid något tillfälle hamnar i behov.
                                 </p>
-                                <div class="attachment">
-                                    MORE
-                                </div>
+                            </figcaption>
+                            <div class="attachment">
+                                MORE
                             </div>
-                        </a>
-                    </div>
-                    <div class="services__item col-25">
-                        <a href="#">
-                            <div class="services__inner">
-                                <img src="./img/main/services/2.png" alt="">
+                        </figure>
+                    </a>
+                    <a class="services__item col-25" href="#">
+                        <figure class="services__inner">
+                            <img src="./img/main/services/2.png" alt="2">
+                            <figcaption>
                                 <h6>Brief Service Description</h6>
                                 <p>
                                     Av erfarenhet vet vi att alla startups vid något tillfälle hamnar i behov.
                                 </p>
-                                <div class="attachment">
-                                    MORE
-                                </div>
+                            </figcaption>
+                            <div class="attachment">
+                                MORE
                             </div>
-                        </a>
-                    </div>
-                    <div class="services__item col-25">
-                        <a href="#">
-                            <div class="services__inner">
-                                <img src="./img/main/services/3.png" alt="">
+                        </figure>
+                    </a>
+                    <a class="services__item col-25" href="#">
+                        <figure class="services__inner">
+                            <img src="./img/main/services/3.png" alt="3">
+                            <figcaption>
                                 <h6>Brief Service Description</h6>
                                 <p>
                                     Av erfarenhet vet vi att alla startups vid något tillfälle hamnar i behov.
                                 </p>
-                                <div class="attachment">
-                                    MORE
-                                </div>
+                            </figcaption>
+                            <div class="attachment">
+                                MORE
                             </div>
-                        </a>
-                    </div>
-                    <div class="services__item col-25">
-                        <a href="#">
-                            <div class="services__inner">
-                                <img src="./img/main/services/4.png" alt="">
+                        </figure>
+                    </a>
+                    <a class="services__item col-25" href="#">
+                        <figure class="services__inner">
+                            <img src="./img/main/services/4.png" alt="4">
+                            <figcaption>
                                 <h6>Brief Service Description</h6>
                                 <p>
                                     Av erfarenhet vet vi att alla startups vid något tillfälle hamnar i behov.
                                 </p>
-                                <div class="attachment">
-                                    MORE
-                                </div>
+                            </figcaption>
+                            <div class="attachment">
+                                MORE
                             </div>
-                        </a>
-                    </div>
+                        </figure>
+                    </a>
                 </div>
                 <div class="services__btn center">
-                    <div class="btn">
-                        <a href="">
-                            CONTACT US
-                        </a>
-                    </div>
+                    <a class="btn" href="#">
+                        CONTACT US
+                    </a>
                 </div>
             </div>
         </section>
         <section class="how">
             <div class="container">
-                <h4>how we working</h4>
+                <h4>
+                    <span class="br">how we</span>
+                    <span class="br">working</span>
+                </h4>
                 <div class="how__steps clearfix">
                     <ul>
                         <li>
@@ -218,76 +209,92 @@
                         Do you like our work principles? Book a free consultation with us!
                     </p>
                     <div class="get-in-touch__btn">
-                        <div class="btn">
-                            <a href="">
-                                get in touch
-                            </a>
-                        </div>
+                        <a class="btn popup-link" href="#popup">
+                            get in touch
+                        </a>
                     </div>
                 </div>
             </div>
         </section>
         <section class="people">
-            <h4>PEOPLE TO PEOPLE</h4>
+            <div class="container">
+                <h4>
+                    <span class="br">PEOPLE TO</span>
+                    <span class="br"> PEOPLE</span>
+                </h4>
+            </div>
             <div class="people__row clearfix container">
                 <p>
                     In general, we are rather atypical lawyers. We smile a lot and adore our customers.
                 </p>
                 <div class="people__btn">
-                    <div class="btn">
-                        <a href="">
-                            JOIN US ON instagram
-                        </a>
-                    </div>
+                    <a class="btn" href="#">
+                        JOIN US ON instagram
+                    </a>
                 </div>
             </div>
             <div class="people__photo">
                 <div class="people__img">
-                    <img src="./img/main/people/1.jpg" alt="">
+                    <picture>
+                        <img src="./img/main/people/1.jpg" alt="people-1">
+                    </picture>
                 </div>
                 <div class="people__img">
-                    <img src="./img/main/people/2.jpg" alt="">
+                    <picture>
+                        <img src="./img/main/people/2.jpg" alt="people-2">
+                    </picture>
                 </div>
                 <div class="people__img">
-                    <img src="./img/main/people/3.jpg" alt="">
+                    <picture>
+                        <img src="./img/main/people/3.jpg" alt="people-3">
+                    </picture>
                 </div>
                 <div class="people__img">
-                    <img src="./img/main/people/4.jpg" alt="">
+                    <picture>
+                        <img src="./img/main/people/4.jpg" alt="people-4">
+                    </picture>
                 </div>
                 <div class="people__img">
-                    <img src="./img/main/people/5.jpg" alt="">
+                    <picture>
+                        <img src="./img/main/people/5.jpg" alt="people-5">
+                    </picture>
                 </div>
                 <div class="people__img">
-                    <img src="./img/main/people/6.jpg" alt="">
+                    <picture>
+                        <img src="./img/main/people/6.jpg" alt="people-6">
+                    </picture>
                 </div>
             </div>
         </section>
         <section class="connect">
             <div class="container">
                 <h4>
-                    Connect <br> <span>with us</span>
+                    <span class="br">Connect</span>
+                    <span class="br">with us</span>
                 </h4>
                 <p>
                     Leave your E-mail and we’ll answer to you as soon as will see your request
                 </p>
-                <form class="connect__form " action="">
+                <form class="connect__form " action="/">
                     <div class="form__left">
-                        <div class="input">
-                            <input type="name" required placeholder="Name">
+                        <div class="input-group">
+                            <input onkeyup="checkParams()" class="input" id="name" type="text" required>
+                            <label class="label" for="name">Name</label>
                         </div>
-                        <div class="input">
-                            <input type="email" required placeholder="Email">
+                        <div class="input-group">
+                            <input onkeyup="checkParams()" class="input" id="email" type="email" required>
+                            <label class="label" for="email">Email</label>
                         </div>
-                        <div class="input">
-                            <input type="tel" required placeholder="Phone">
+                        <div class="input-group">
+                            <input onkeyup="checkParams()" class="input" id="phone" type="tel" required>
+                            <label class="label" for="phone">Phone</label>
                         </div>
                     </div>
-                    <div class="form__right">
-                        <textarea name="connect"  cols="27" rows="10" placeholder="Text"></textarea>
+                    <div class="form__right textarea input-group">
+                        <textarea class="input" id="text" name="connect"  cols="27" rows="10"></textarea>
+                        <label class="label" for="text">Text</label>
                     </div>
-
                     <div class="checkbox-row">
-
                         <label class="check option">
                             <input class="check__input" type="checkbox">
                             <span class="check__box"></span>
@@ -310,35 +317,68 @@
                         </label>
                     </div>
                     <div class="form__btn">
-                        <button type="submit">
+                        <button id="submit-btn" class="btn" type="submit" disabled>
                             SUBMIT
-                            <img src="./img/main/arrow.svg" alt="arrow">
+                            <span class="long-arrow-right"></span>
                         </button>
+                        <a href="#popup-2" class="btn popup-link" >
+                            SUBMIT
+                            <span class="long-arrow-right"></span>
+                        </a>
                     </div>
                     <div class="call-us">
                         or call us <a href="tel:08-30-94-84">08-30-94-84</a>
                     </div>
-
                 </form>
             </div>
         </section>
     </main>
     <footer class="footer">
-        <div class="footer__row">
+        <div class="footer__row container">
             <div class="footer__contact">
                 <h6>Contact us</h6>
                 <div class="contact__row">
                     <address>
-                        Drottninggatan 88F, 111 36 Stockholm
+                        <a href="https://goo.gl/maps/kbEkQQpnEZffQC3N8">
+                            Drottninggatan 88F, 111 36 Stockholm
+                            <svg width="16" height="15" viewBox="0 0 16 15" fill="#BBBBBB" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M15.9219 7.75792C15.7454 8.2283 15.3081 8.53229 14.8073 8.53229H14.3998V14.3987C14.3998 14.6931 14.1609 14.932 13.8665 14.932H10.6667V11.1988C10.6667 9.7285 9.47045 8.53229 8.00011 8.53229C6.52978 8.53229 5.33357 9.7285 5.33357 11.1988V14.932H2.13371C1.83932 14.932 1.6004 14.6931 1.6004 14.3987V8.53229H1.19242C0.691639 8.53229 0.254325 8.22883 0.0777996 7.75845C-0.0987258 7.28807 0.0308684 6.77076 0.408452 6.44118L6.63697 0.542776C7.40174 -0.180925 8.59902 -0.180925 9.36325 0.542776L15.6067 6.45504C15.9683 6.77023 16.0984 7.28754 15.9219 7.75792Z" />
+                            </svg>
+
+                        </a>
                     </address>
-                    <a href="mailto:info@startupjuristerna.se">info@startupjuristerna.se</a>
-                    <a href="tel:08-30-94-84">08-30-94-84</a>
+                    <a href="mailto:info@startupjuristerna.se">
+                        info@startupjuristerna.se
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="#BBBBBB" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M10.88 10.774C10.3283 11.3522 9.61565 11.7515 8.83445 11.9201C8.05324 12.0888 7.23939 12.0191 6.49823 11.72C5.75708 11.421 5.12275 10.9064 4.67735 10.2428C4.23195 9.57919 3.99599 8.79718 4 7.99798C4 6.93712 4.42143 5.9197 5.17158 5.16956C5.92172 4.41941 6.93914 3.99799 8 3.99799C9.06087 3.99799 10.0783 4.41941 10.8284 5.16956C11.5786 5.9197 12 6.93712 12 7.99798V9.19798C12 9.51624 12.1264 9.82147 12.3515 10.0465C12.5765 10.2716 12.8817 10.398 13.2 10.398C13.5183 10.398 13.8235 10.2716 14.0485 10.0465C14.2736 9.82147 14.4 9.51624 14.4 9.19798V7.99798C14.3986 6.6253 13.9558 5.28945 13.1371 4.18763C12.3185 3.0858 11.1672 2.2764 9.85333 1.87889C8.53946 1.48139 7.1326 1.51684 5.84043 1.98004C4.54825 2.44323 3.43924 3.3096 2.6771 4.45127C1.91496 5.59294 1.54008 6.9494 1.6078 8.32041C1.67552 9.69142 2.18225 11.0043 3.05319 12.0653C3.92413 13.1263 5.11313 13.8792 6.44466 14.2128C7.77619 14.5464 9.1797 14.443 10.448 13.918C10.5461 13.8682 10.6534 13.8392 10.7632 13.8327C10.873 13.8263 10.983 13.8425 11.0862 13.8805C11.1894 13.9185 11.2837 13.9773 11.3632 14.0534C11.4427 14.1294 11.5056 14.221 11.5481 14.3225C11.5906 14.424 11.6116 14.5331 11.61 14.6431C11.6084 14.7531 11.5841 14.8616 11.5387 14.9617C11.4933 15.0619 11.4277 15.1517 11.346 15.2253C11.2643 15.299 11.1683 15.3551 11.064 15.39C9.47856 16.0473 7.72375 16.1774 6.05873 15.7609C4.39372 15.3444 2.90678 14.4035 1.81754 13.0771C0.728302 11.7507 0.0945059 10.1092 0.00976164 8.39501C-0.0749827 6.68079 0.393819 4.98476 1.34693 3.55741C2.30003 2.13007 3.68691 1.04709 5.30273 0.468418C6.91855 -0.110252 8.67763 -0.153928 10.3202 0.343841C11.9627 0.841609 13.4016 1.85443 14.4244 3.23272C15.4472 4.611 15.9996 6.28167 16 7.99798V9.19798C16.0018 9.79815 15.8107 10.383 15.4549 10.8663C15.0991 11.3497 14.5974 11.7059 14.0237 11.8824C13.4501 12.059 12.835 12.0466 12.269 11.847C11.7029 11.6474 11.216 11.2713 10.88 10.774ZM8 10.398C8.63652 10.398 9.24697 10.1451 9.69706 9.69504C10.1471 9.24495 10.4 8.6345 10.4 7.99798C10.4 7.36147 10.1471 6.75102 9.69706 6.30093C9.24697 5.85084 8.63652 5.59799 8 5.59799C7.36348 5.59799 6.75303 5.85084 6.30295 6.30093C5.85286 6.75102 5.6 7.36147 5.6 7.99798C5.6 8.6345 5.85286 9.24495 6.30295 9.69504C6.75303 10.1451 7.36348 10.398 8 10.398Z"/>
+                        </svg>
+
+                    </a>
+                    <a href="tel:08-30-94-84">
+                        08-30-94-84
+                        <svg width="14" height="14" viewBox="0 0 14 14" fill="#BBBBBB" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M8.07478 8.07488C6.68932 9.46033 5.08495 10.7847 4.45093 10.1505C3.54287 9.24264 2.98305 8.45182 0.981606 10.0604C-1.02002 11.6697 0.517337 12.7419 1.39687 13.6218C2.41186 14.6366 6.19548 13.6751 9.93535 9.9358C13.6747 6.19558 14.6368 2.41196 13.6211 1.39663C12.7414 0.516913 11.6692 -1.01992 10.0607 0.981881C8.45172 2.9828 9.24219 3.54279 10.1504 4.45086C10.7843 5.08505 9.46023 6.68925 8.07478 8.07488Z" />
+                        </svg>
+
+                    </a>
                 </div>
             </div>
             <div class="footer__media">
                 <h6>Social media</h6>
-                <a href="" class="instagram">Instagram</a>
-                <a href="" class="facebook">Facebook</a>
+                <a href="" class="instagram">
+                    Instagram
+                    <svg width="14" height="14" viewBox="0 0 14 14" fill="#BBBBBB" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M11.4273 3.34267C11.4273 3.50288 11.3798 3.65951 11.2908 3.79274C11.2018 3.92597 11.0753 4.02982 10.9273 4.09114C10.7793 4.15247 10.6164 4.16853 10.4593 4.13728C10.3021 4.10603 10.1578 4.02888 10.0445 3.91559C9.93122 3.8023 9.85407 3.65796 9.82282 3.50082C9.79157 3.34368 9.80763 3.1808 9.86896 3.03278C9.93028 2.88477 10.0341 2.75826 10.1674 2.66927C10.3006 2.58028 10.4572 2.5328 10.6174 2.53283C10.8322 2.53288 11.0382 2.61821 11.19 2.77008C11.3419 2.92194 11.4272 3.1279 11.4273 3.34267ZM14 7L13.9998 7.0102L13.9538 9.94703C13.9419 11.006 13.5159 12.0181 12.7671 12.767C12.0183 13.5158 11.0061 13.9417 9.94717 13.9537L7 14L6.9898 13.9998L4.05297 13.9539C2.99402 13.942 1.98182 13.516 1.23297 12.7672C0.484116 12.0184 0.0581046 11.0062 0.0461 9.94727L0 7L0.000200017 6.9898L0.0460667 4.05287C0.0581052 2.99393 0.484127 1.98177 1.23297 1.23297C1.98182 0.484157 2.994 0.0581857 4.05293 0.0462001L7 0L7.0102 0.000200017L9.94703 0.0460667C11.0059 0.0580533 12.0181 0.484032 12.7669 1.23284C13.5157 1.98166 13.9417 2.99382 13.9537 4.05273L14 7ZM12.6963 7L12.6505 4.07333C12.6423 3.35346 12.3528 2.66536 11.8437 2.1563C11.3346 1.64723 10.6465 1.35764 9.92667 1.3495L7 1.3038L4.07333 1.3495C3.35346 1.35766 2.66537 1.64725 2.1563 2.15631C1.64723 2.66537 1.35763 3.35346 1.34947 4.07333L1.30377 7L1.34947 9.92667C1.35761 10.6466 1.6472 11.3347 2.15627 11.8437C2.66534 12.3528 3.35345 12.6424 4.07333 12.6505L7 12.6962L9.92667 12.6505C10.6466 12.6424 11.3347 12.3528 11.8437 11.8437C12.3528 11.3347 12.6424 10.6466 12.6505 9.92667L12.6963 7ZM10.5947 7C10.5947 7.71097 10.3838 8.40597 9.98885 8.99711C9.59386 9.58826 9.03244 10.049 8.37559 10.3211C7.71874 10.5931 6.99597 10.6643 6.29866 10.5256C5.60136 10.3869 4.96084 10.0446 4.45812 9.54183C3.95539 9.03909 3.61303 8.39858 3.47433 7.70127C3.33564 7.00397 3.40683 6.28119 3.67891 5.62435C3.95099 4.9675 4.41173 4.40609 5.00288 4.0111C5.59403 3.61611 6.28903 3.40529 7 3.4053C7.95304 3.40638 8.86674 3.78545 9.54064 4.45935C10.2145 5.13326 10.5936 6.04696 10.5947 7ZM9.2911 7C9.2911 6.54686 9.15673 6.10389 8.90497 5.72711C8.65322 5.35034 8.29539 5.05668 7.87674 4.88327C7.45809 4.70986 6.99741 4.66449 6.55298 4.75289C6.10854 4.8413 5.7003 5.05951 5.37988 5.37994C5.05946 5.70036 4.84125 6.1086 4.75285 6.55304C4.66445 6.99748 4.70983 7.45815 4.88324 7.8768C5.05666 8.29545 5.35033 8.65328 5.72711 8.90502C6.10388 9.15677 6.54686 9.29114 7 9.29113C7.60742 9.29043 8.18977 9.04881 8.61927 8.61929C9.04878 8.18977 9.29038 7.60742 9.29107 7H9.2911Z" />
+                    </svg>
+
+                </a>
+                <a href="" class="facebook">
+                    Facebook
+                    <svg width="6" height="14" viewBox="0 0 6 14" fill="#BBBBBB" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M6 4.53326H3.95661V3.08023C3.95661 2.53455 4.29018 2.40733 4.52512 2.40733C4.75953 2.40733 5.96712 2.40733 5.96712 2.40733V0.008404L3.9812 0C1.77664 0 1.27495 1.78919 1.27495 2.93418V4.53326H0V7.00522H1.27495C1.27495 10.1776 1.27495 14 1.27495 14H3.95661C3.95661 14 3.95661 10.1399 3.95661 7.00522H5.76613L6 4.53326Z" />
+                    </svg>
+
+                </a>
             </div>
             <div class="footer__general">
                 <h6>general information</h6>
@@ -348,6 +388,100 @@
         </div>
     </footer>
 </div>
+<div id="popup" class="popup">
+    <div class="popup__body">
+        <div class="popup__content">
+            <a href="#header" class="close close-popup">
+                <span class="esc">Esc</span>
+            </a>
+            <section class="connect">
+                <div class="container">
+                    <h4>
+                        <span class="br">Connect</span>
+                        <span class="br">with us</span>
+                    </h4>
+                    <p>
+                        Leave your E-mail and we’ll answer to you as soon as will see your request
+                    </p>
+                    <form class="connect__form " action="/">
+                        <div class="form__left">
+                            <div class="input-group">
+                                <input onkeyup="checkParams2()" class="input" id="name-pop" type="text" required>
+                                <label class="label" for="name-pop">Name</label>
+                            </div>
+                            <div class="input-group">
+                                <input onkeyup="checkParams2()" class="input" id="email-pop" type="email" required>
+                                <label class="label" for="email-pop">Email</label>
+                            </div>
+                            <div class="input-group">
+                                <input onkeyup="checkParams2()" class="input" id="phone-pop" type="tel" required>
+                                <label class="label" for="phone-pop">Phone</label>
+                            </div>
+                        </div>
+                        <div class="form__right textarea input-group">
+                            <textarea class="input" id="text-pop" name="connect"  cols="27" rows="10"></textarea>
+                            <label class="label" for="text-pop">Text</label>
+                        </div>
+                        <div class="checkbox-row">
+                            <label class="check option">
+                                <input class="check__input" type="checkbox">
+                                <span class="check__box"></span>
+                                <span>test</span>
+                            </label>
+                            <label class="check option">
+                                <input class="check__input" type="checkbox" checked>
+                                <span class="check__box"></span>
+                                <span>test</span>
+                            </label>
+                            <label class="check option">
+                                <input class="check__input" type="checkbox" disabled>
+                                <span class="check__box"></span>
+                                <span>test</span>
+                            </label>
+                            <label class="check option">
+                                <input class="check__input" type="checkbox" checked disabled>
+                                <span class="check__box"></span>
+                                <span>test</span>
+                            </label>
+                        </div>
+                        <div class="form__btn">
+                            <button id="submit-btn-pop" class="btn" type="submit" disabled>
+                                SUBMIT
+                                <span class="long-arrow-right"></span>
+                            </button>
+                            <a href="#popup-2" class="btn popup-link" >
+                                SUBMIT
+                                <span class="long-arrow-right"></span>
+                            </a>
+                        </div>
+                        <div class="call-us">
+                            or call us <a href="tel:08-30-94-84">08-30-94-84</a>
+                        </div>
+                    </form>
+                </div>
+            </section>
+        </div>
+    </div>
+</div>
+<div id="popup-2" class="popup">
+    <div class="popup__body">
+        <div class="popup__content">
+            <a href="#header" class="close close-popup">
+                <span class="esc">Esc</span>
+            </a>
+            <div class="thank container">
+                <h4>
+                    <span class="br">Thank you for the</span>
+                    <span class="br">request!</span>
+                </h4>
+                <picture>
+                    <img src="img/main/smile.svg" alt="smile">
+                </picture>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="js/jquery.min.js" ></script>
 <script src="js/slick.min.js"></script>
 <script src="js/script.min.js"></script>
 </body>
