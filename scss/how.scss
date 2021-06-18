@@ -1,14 +1,12 @@
 
 .how{
   padding: 7vw 0 0;
-
-  & h4{
+  & h2{
     margin-bottom: 110px;
   }
-
   &__steps{
-    & h3{
-      color: black;
+    & h4{
+      color: $black;
       margin-bottom: 10px;
       text-align: center;
       @include adaptiv-font(32, 20);
@@ -16,22 +14,20 @@
       font-family: Oswald, sans-serif;
       font-weight: 400;
     }
-
     & p{
-      color: #BBBBBB;
+      color: $gray;
       @include adaptiv-font(22, 16);
       line-height: 1.2;
       font-family: "Open Sans", sans-serif;
     }
     & li{
       padding: 60px 62px 40px;
-      border: dotted 2px #BBBBBB;
+      border: dotted 2px $gray;
       max-width: 555px;
       border-radius: 15px;
       position: relative;
-      background-color: white;
+      background-color: $white;
       transition: .3s ease-in-out;
-
       @media (max-width: 1200px) {
         max-width: 470px;
       }
@@ -42,11 +38,9 @@
         padding: 60px 15px 30px;
         text-align: justify;
       }
-
       &:hover{
-        border: solid 2px #00bd4c;
+        border: solid 2px $primary-color;
       }
-
       &:nth-child(odd){
         float: left;
         margin-top: 190px;
@@ -54,23 +48,21 @@
           margin-top: 100px;
         }
         &:after{
-          content: "";
-          position: absolute;
+          @extend %reset;
           width: 450px;
           height: 30px;
           top: -80px;
           right: -32%;
-          border-left: 2px dotted #BBB;
-          border-top: 2px dotted #bbb;
+          border-left: 2px dotted $gray;
+          border-top: 2px dotted $gray;
           z-index: -1;
-
           @media (max-width: 1200px) {
             right: -47%;
           }
           @media (max-width: 1100px) {
             border-top: none;
             border-left: none;
-            border-right: 2px dotted #BBB;
+            border-right: 2px dotted $gray;
             right: 50%;
             top: -100%;
             height: 340px;
@@ -84,16 +76,14 @@
         @media (max-width: 1100px) {
           margin-top: 100px;
         }
-
         &:after{
-          content: "";
-          position: absolute;
+          @extend %reset;
           width: 450px;
           height: 30px;
           top: -80px;
           right: 50%;
-          border-right: 2px dotted #BBB;
-          border-top: 2px dotted #bbb;
+          border-right: 2px dotted $gray;
+          border-top: 2px dotted $gray;
           z-index: -1;
           @media (max-width: 1100px) {
             border-top: none;
@@ -101,7 +91,6 @@
             top: -100%;
             height: 340px;
           }
-
         }
       }
       &:first-child{
@@ -112,95 +101,34 @@
           border-right: none;
         }
       }
-
       &:hover:before{
-        background: #00BD4C;
-        color: #fff;
+        background: $primary-color;
+        color: $white;
       }
       &:nth-child(1):hover:before,
       &:nth-child(2):hover:before,
       &:nth-child(3):hover:before,
       &:nth-child(4):hover:before{
-        background: #00BD4C;
-        color: #fff;
-        border: 2px solid #00BD4C;
+        background: $primary-color;
+        color: $white;
+        border: 2px solid $primary-color;
       }
 
       &:nth-child(1):before{
         content: "1";
-        position: absolute;
-        display: block;
-        width: 110px;
-        height: 110px;
-        background-color: #FFFFFF;
-        border: 2px dashed #BBBBBB;
-        border-radius: 50%;
-        overflow: hidden;
-        color: #00bd4c;
-        text-align: center;
-        padding-top: 20px;
-        font: bold 50px/59px Oswald, sans-serif;
-        top: -55px;
-        left: calc(50% - 55px);
-        transition: .4s ease-in-out;
-
+        @extend %how-child;
       }
       &:nth-child(2):before{
         content: "2";
-        position: absolute;
-        display: block;
-        width: 110px;
-        height: 110px;
-        background-color: #FFFFFF;
-        border: 2px dashed #BBBBBB;
-        border-radius: 50%;
-        overflow: hidden;
-        color: #00bd4c;
-        text-align: center;
-        padding-top: 20px;
-        font: bold 50px/59px Oswald, sans-serif;
-        top: -55px;
-        left: calc(50% - 55px);
-        transition: .4s ease-in-out;
-
+        @extend %how-child;
       }
       &:nth-child(3):before{
         content: "3";
-        position: absolute;
-        display: block;
-        width: 110px;
-        height: 110px;
-        background-color: #FFFFFF;
-        border: 2px dashed #BBBBBB;
-        border-radius: 50%;
-        overflow: hidden;
-        color: #00bd4c;
-        text-align: center;
-        padding-top: 20px;
-        font: bold 50px/59px Oswald, sans-serif;
-        top: -55px;
-        left: calc(50% - 55px);
-        transition: .4s ease-in-out;
-
+        @extend %how-child;
       }
       &:nth-child(4):before{
         content: "4";
-        position: absolute;
-        display: block;
-        width: 110px;
-        height: 110px;
-        background-color: #FFFFFF;
-        border: 2px dashed #BBBBBB;
-        border-radius: 50%;
-        overflow: hidden;
-        color: #00bd4c;
-        text-align: center;
-        padding-top: 20px;
-        font: bold 50px/59px Oswald, sans-serif;
-        top: -55px;
-        left: calc(50% - 55px);
-        transition: .4s ease-in-out;
-
+        @extend %how-child;
       }
     }
   }

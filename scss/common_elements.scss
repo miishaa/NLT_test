@@ -1,0 +1,80 @@
+
+//arrows
+
+.long-arrow-right {
+  display: inline-block;
+  position: absolute;
+  top: 40%;
+  right: 24px;
+  width: 13px;
+  height: 13px;
+  border-top: 2px solid $white;
+  border-left: 2px solid $white;
+}
+.long-arrow-right {
+  transform: rotate(135deg);
+}
+.long-arrow-right::after {
+  content: "";
+  display: block;
+  width: 2px;
+  height: 15px;
+  background-color: $white;
+  transform: rotate(-45deg) translate(4.5px, 2px);
+  left: 0;
+  top: 0;
+}
+
+//close icon
+
+.close {
+  opacity: 0.3;
+}
+.close:hover {
+  opacity: 1;
+}
+.close:before,
+.close:after {
+  @extend %reset;
+  left: 15px;
+  height: 20px;
+  width: 2px;
+  background-color: #333;
+}
+.close:before {
+  transform: rotate(45deg);
+}
+.close:after {
+  transform: rotate(-45deg);
+}
+
+//button
+
+.btn {
+  display: inline-block;
+  position: relative;
+  background: $primary-color;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.25);
+  border: 2px solid transparent;
+  border-radius: 28px;
+  text-transform: uppercase;
+  font: 400 1.375rem/1.2 Oswald, sans-serif;
+  color: $white;
+  padding: 13px 0;
+  text-align: center;
+  transition:  color, background-color .4s ease-in-out;
+  max-width: 296px;
+  width: 100%;
+  &:hover{
+    color: $primary-color;
+    background-color: $white;
+    border: 2px solid $primary-color;
+    .long-arrow-right{
+      border-top: 2px solid $primary-color;
+      border-left: 2px solid $primary-color;
+    }
+    .long-arrow-right::after{
+      background-color: $primary-color;
+    }
+  }
+}

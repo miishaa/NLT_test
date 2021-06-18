@@ -1,7 +1,10 @@
-
+header{
+  min-width: 320px;
+}
 .header-row{
   display: grid;
   grid-template-columns: 75px auto 214px ;
+  height: 100%;
   @media (max-width: 1200px) {
     grid-template-columns: 75px auto 210px;
   }
@@ -11,40 +14,53 @@
   @media (max-width: 767px){
     grid-template-columns: 30px auto 30px;
   }
-
 }
 .header{
-  background: #FFFFFF;
-  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
   position: fixed;
   top: 0;
   right: 0;
+  left: 0;
   width: 100%;
   z-index: 50;
-
+  height: 70px;
   @media (max-width: 767px){
-    position: fixed;
+    height: 50px;
+  }
+  &:before{
+    @extend %reset;
     top: 0;
     left: 0;
     width: 100%;
-    z-index: 20;
+    height: 100%;
+    background-color: $white;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+    z-index: 3;
   }
-
+  & .container{
+    height: 100%;
+  }
+  &__row{
+    position: relative;
+    z-index: 2;
+  }
   &__logo{
-    align-self: center;
     z-index: 10;
+    align-self: center;
+    & a{
+      display: block;
+    }
     @media (max-width: 767px){
-      align-self: start;
       text-align: center;
     }
-    & img{
-    }
   }
-
+  //navigation
 
   &__navigation{
     justify-self: center;
-
+    & ul{
+      position: relative;
+      z-index: 3;
+    }
     @media (max-width: 767px) {
       position: fixed;
       overflow: auto;
@@ -52,54 +68,53 @@
       left: 0;
       width: 100%;
       height: 100%;
-      background-color: teal;
-      padding: 70px 50px 0;
+      background-color: $white;
+      padding: 74px 0 116px;
       transition: all .3s ease-in-out;
       &.active{
         top: 0;
       }
-
     }
     & ul li{
       display: inline-block;
       margin: 0 32px;
-
       @media (max-width: 767px) {
         display: block;
       }
-
       & a{
         text-transform: uppercase;
-        color: black;
-        font: 400 18px/21px Oswald,sans-serif;
+        color: $black;
+        font: 400 1.125rem/1.2 Oswald,sans-serif;
         display: block;
-        padding: 23px 0px;
+        padding: 23px 0;
         position: relative;
         cursor: pointer;
-
         &:hover:after,
         &:focus:after{
           width: 100%;
         }
         &:after{
-          content: "";
+          @extend %reset;
           display: block;
-          position: absolute;
           bottom: 15px;
           right: 0;
           height: 3px;
           width: 0;
-          background-color: #00BD4C;
+          background-color: $primary-color;
           transition: width .3s ease-out;
+        }
+        @media (max-width: 767px){
+          font-size: 1.375rem;
+          color: $primary-color;
+          padding: 0 0 24px 0;
         }
       }
     }
   }
+  //burger menu
 
   .header__burger{
     display: none;
-    z-index: 3;
-
     @media (max-width: 767px) {
       display: block;
       position: relative;
@@ -107,23 +122,22 @@
       height: 20px;
       align-self: center;
       justify-content: end;
-      z-index: 3;
+      z-index: 4;
       order: -1;
-
+      cursor: pointer;
       & span{
         position: absolute;
-        background-color: #00bd4c;
+        background-color: $primary-color;
         left: 0;
         width: 100%;
         height: 2px;
         top: 9px;
         transition: all .3s ease;
       }
-
       &:before,
       &:after{
         content: "";
-        background-color: #00bd4c;
+        background-color: $primary-color;
         position: absolute;
         width: 100%;
         height: 2px;
@@ -136,7 +150,6 @@
       &:after{
         bottom: 0;
       }
-
       &.active:before{
         transform: rotate(45deg);
         top: 9px;
@@ -148,18 +161,16 @@
       &.active span{
         transform: scale(0);
       }
-
     }
   }
-
   &__btn {
     text-align: right;
     align-self: center;
     z-index: 3;
-
     & .btn{
       width: 214px;
       padding: 13px 0 13px 40px;
+      transition: color .4s ease-in-out;
       @media (max-width: 950px) {
         font-size: 0;
         width: 100%;
@@ -170,53 +181,45 @@
         padding: 0;
       }
     }
-
-
     & a{
     position: relative;
-
       & svg{
         position: absolute;
         top: calc(50% - 10px);
         left: 12%;
+        transition: fill .4s ease-in-out;
         @media (max-width: 950px) {
           fill: $primary-color;
+          position: inherit;
+          transition: none;
         }
       }
       &:hover svg {
         fill: $primary-color;
       }
-
     }
   }
 }
+//hover menu
 
 .hover-menu{
   position: relative;
-
-  &:hover .sub-menu{
-    display: block;
-    @media (max-width: 767px) {
-      display: none;
-    }
-  }
-  &:hover .arrow{
-    border-top: 10px solid #00bd4c;
-    transform: rotate(180deg);
-    @media (max-width: 767px) {
-      display: none;
-    }
-  }
 }
-
+ul.sub-sub-menu{
+  left: -150px;
+  top: 55px;
+}
 ul.sub-menu{
+  left: -70px;
+  top: 55px;
+}
+ul.sub-menu,
+ul.sub-sub-menu{
   display: none;
   position: absolute;
-  border: 2px solid #00BD4C;
+  border: 2px solid $primary-color;
   border-radius: 15px;
-  background-color: white;
-  left: -20px;
-  top: 55px;
+  background-color: $white;
   min-width: 200px;
 
   & > .sub-menu__item{
@@ -227,24 +230,82 @@ ul.sub-menu{
     z-index: 10;
   }
 }
-
 .arrow{
   width: 0;
   height: 0;
-  border-top: 10px solid black;
+  border-top: 10px solid $black;
   border-right: 10px solid transparent;
   border-left: 10px solid transparent;
   position: absolute;
-  top: 45%;
+  top: 28px;
   right: -30px;
   transition: all .2s ease-in-out;
-  @media (max-width: 767px) {
-    display: none;
+}
+body.mouse .arrow{
+  pointer-events: none;
+}
+body.mouse .hover-menu:hover .arrow{
+  border-top: 10px solid $primary-color;
+  transform: rotate(180deg);
+}
+body.touch .arrow.active{
+  border-top: 10px solid $primary-color;
+  transform: rotate(180deg);
+}
+.header__navigation.active .arrow{
+  top: 10px;
+  right: 10px;
+}
+body.touch .sub-menu.open{
+  display: block;
+}
+body.touch .sub-menu{
+  display: none;
+}
+body.touch .sub-sub-menu.open{
+  display: block;
+  left: -70px;
+  top: 55px;
+}
+body.mouse .hover-menu:hover .sub-menu {
+  display: block;
+}
+body.mouse .hover-menu:hover .sub-sub-menu {
+  display: grid;
+  grid-template-columns: 200px 200px;
+  grid-auto-rows: auto;
+  padding: 20px;
+  grid-gap: 20px;
+  align-items: center;
+  text-align: left;
+}
+body.mouse .sub-sub-menu__item{
+    padding: 0;
+    margin: 0;
+  }
+@media (max-width: 767px){
+  body.touch .sub-menu.open,
+  body.touch .sub-sub-menu.open{
+    position: relative;
+    left: 0;
+    top: 0;
+    border: none;
+    border-radius: 0;
+    background-color: $white;
+    & li a{
+      color: $black-1;
+    }
+    & > li{
+      padding: 0 0 0 32px;
+      margin: 0;
+    }
   }
 }
-
-body.lock{
-  overflow: hidden;
+@media (max-width: 767px) {
+  .call-us.active .hidden {
+    opacity: 1;
+    visibility: visible;
+  }
 }
 
 

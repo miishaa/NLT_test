@@ -1,20 +1,20 @@
 
 footer{
   margin-top: auto;
-  background-color: #404040;
+  background-color: $black-1;
   padding: 30px 80px;
   @media (max-width: 768px) {
     padding: 30px 15px;
   }
   h6{
     text-transform: uppercase;
-    color: #BBBBBB;
-    font: 600 16px/19px Oswald, sans-serif;
+    color: $gray;
+    font: 600 1rem/1.2 Oswald, sans-serif;
     margin-bottom: 13px;
   }
   a{
     color: $gray;
-    font: 400 14px/14px 'Pontano Sans', sans-serif;
+    font: 400 .875rem/1.2 'Pontano Sans', sans-serif;
     position: relative;
     transition: .3s ease-in-out;
     & svg{
@@ -29,7 +29,6 @@ footer{
         fill: $primary-color;
       }
     }
-
     @media (max-width: 550px) {
       display: block;
     }
@@ -46,12 +45,10 @@ footer{
       grid-template-columns: 50% 50%;
       grid-template-rows: 50% 50%;
     }
-
     .footer__contact {
       @media (max-width: 810px){
         grid-column: span 2;
       }
-
       .contact__row{
         display: grid;
         grid-auto-flow: column;
@@ -62,7 +59,6 @@ footer{
 
         }
       }
-
       a{
         padding-left: 24px;
       }
@@ -72,7 +68,7 @@ footer{
         align-self: center;
       }
       a{
-        padding-left: 24px;
+        padding-left: 20px;
         & + a{
           margin-left: 10px;
           @media (max-width: 550px) {

@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Title</title>
+    <link rel="preload" href="fonts/pontano-sans-v8-latin-regular.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="fonts/oswald-v36-latin-regular.woff2" as="font" type="font/woff2" crossorigin/>
+    <link rel="preload" href="fonts/oswald-v36-latin-600.woff2" as="font" type="font/woff2" crossorigin/>
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
 </head>
@@ -23,19 +26,32 @@
                 <nav class="header__navigation">
                     <ul>
                         <li><a href="">home</a></li>
-
                         <li class="hover-menu">
                             <a href="">services</a>
                             <span class="arrow menu__arrow"></span>
                             <ul class="sub-menu">
-                                <li class="sub-menu__item"><a href="#">Sub-1</a></li>
-                                <li class="sub-menu__item"><a href="#">Sub-2</a></li>
-                                <li class="sub-menu__item"><a href="#">Sub-3</a></li>
-                                <li class="sub-menu__item"><a href="#">Sub-4</a></li>
-                                <li class="sub-menu__item"><a href="#">Sub-5</a></li>
+                                <li class="sub-menu__item"><a href="#">LEGAL ADVICE</a></li>
+                                <li class="sub-menu__item"><a href="#">Establishment of agreement /
+                                    agreement review</a></li>
+                                <li class="sub-menu__item"><a href="#">Dispute resolution and
+                                    negotiation</a></li>
+                                <li class="sub-menu__item"><a href="#">Business development and
+                                    structural work</a></li>
                             </ul>
                         </li>
-                        <li><a href="">about us</a></li>
+                        <li class="hover-menu">
+                            <a href="">about us</a>
+                            <span class="arrow menu__arrow"></span>
+                            <ul class="sub-sub-menu">
+                                <li class="sub-sub-menu__item"><a href="#">LEGAL ADVICE</a></li>
+                                <li class="sub-sub-menu__item"><a href="#">Establishment of agreement /
+                                    agreement review</a></li>
+                                <li class="sub-sub-menu__item"><a href="#">Dispute resolution and
+                                    negotiation</a></li>
+                                <li class="sub-sub-menu__item"><a href="#">Business development and
+                                    structural work</a></li>
+                            </ul>
+                        </li>
                         <li><a href="">plug</a></li>
                     </ul>
                 </nav>
@@ -72,7 +88,7 @@
         </section>
         <section class="clients">
             <div class="container">
-                <h4>OUR CLIENTS</h4>
+                <h2>OUR CLIENTS</h2>
                 <div class="slider">
                     <div>
                     <picture>
@@ -104,62 +120,62 @@
         </section>
         <section class="services">
             <div class="container">
-                <h4>SERVICES</h4>
+                <h2>SERVICES</h2>
                 <div class="services__row clearfix">
-                    <a class="services__item col-25" href="#">
+                    <a class="services__item col-3" href="#">
                         <figure class="services__inner">
                             <img src="./img/main/services/1.png" alt="1">
                             <figcaption>
-                                <h6>Brief Service Description</h6>
-                                <p>
-                                    Av erfarenhet vet vi att alla startups vid något tillfälle hamnar i behov.
-                                </p>
+                                Brief Service Description
                             </figcaption>
-                            <div class="attachment">
+                            <span>
+                                Av erfarenhet vet vi att alla startups vid något tillfälle hamnar i behov.
+                            </span>
+                            <span class="attachment">
                                 MORE
-                            </div>
+                            </span>
                         </figure>
                     </a>
-                    <a class="services__item col-25" href="#">
+                    <a class="services__item col-3" href="#">
                         <figure class="services__inner">
                             <img src="./img/main/services/2.png" alt="2">
                             <figcaption>
-                                <h6>Brief Service Description</h6>
-                                <p>
-                                    Av erfarenhet vet vi att alla startups vid något tillfälle hamnar i behov.
-                                </p>
+                                Brief Service Description
                             </figcaption>
-                            <div class="attachment">
+                            <span>
+                                Av erfarenhet vet vi att alla startups vid något tillfälle hamnar i behov.
+                            </span>
+                            <span class="attachment">
                                 MORE
-                            </div>
+                            </span>
                         </figure>
                     </a>
-                    <a class="services__item col-25" href="#">
+                    <a class="services__item col-3" href="#">
                         <figure class="services__inner">
                             <img src="./img/main/services/3.png" alt="3">
                             <figcaption>
-                                <h6>Brief Service Description</h6>
-                                <p>
-                                    Av erfarenhet vet vi att alla startups vid något tillfälle hamnar i behov.
-                                </p>
+                                Brief Service Description
                             </figcaption>
-                            <div class="attachment">
+                            <span>
+                                Av erfarenhet vet vi att alla startups vid något tillfälle hamnar i behov.
+                            </span>
+                            <span class="attachment">
                                 MORE
-                            </div>
+                            </span>
                         </figure>
                     </a>
-                    <a class="services__item col-25" href="#">
+                    <a class="services__item col-3" href="#">
                         <figure class="services__inner">
                             <img src="./img/main/services/4.png" alt="4">
                             <figcaption>
-                                <h6>Brief Service Description</h6>
-                                <p>
-                                    Av erfarenhet vet vi att alla startups vid något tillfälle hamnar i behov.
-                                </p>
+                                Brief Service Description
                             </figcaption>
-                            <div class="attachment">
+                            <span>
+                                Av erfarenhet vet vi att alla startups vid något tillfälle hamnar i behov.
+                            </span>
+                            <span class="attachment">
                                 MORE
-                            </div>
+                            </span>
                         </figure>
                     </a>
                 </div>
@@ -172,56 +188,60 @@
         </section>
         <section class="how">
             <div class="container">
-                <h4>
+                <h2>
                     <span class="br">how we</span>
                     <span class="br">working</span>
-                </h4>
+                </h2>
                 <div class="how__steps clearfix">
                     <ul>
                         <li>
-                            <h3>Meeting appointment with the client</h3>
+                            <h4>Meeting appointment with the client</h4>
                             <p>
                                 After you have left your phone number in the application, we will call you up and determine the time and place of the meeting
                             </p>
                         </li>
                         <li>
-                            <h3>Meeting appointment with the client</h3>
+                            <h4>Meeting appointment with the client</h4>
                             <p>
                                 After you have left your phone number in the application, we will call you up and determine the time and place of the meeting
                             </p>
                         </li>
                         <li>
-                            <h3>Meeting appointment with the client</h3>
+                            <h4>Meeting appointment with the client</h4>
                             <p>
                                 After you have left your phone number in the application, we will call you up and determine the time and place of the meeting
                             </p>
                         </li>
                         <li>
-                            <h3>Meeting appointment with the client</h3>
+                            <h4>Meeting appointment with the client</h4>
                             <p>
                                 After you have left your phone number in the application, we will call you up and determine the time and place of the meeting
                             </p>
                         </li>
                     </ul>
                 </div>
-                <div class="get-in-touch center container">
+            </div>
+        </section>
+        <div class="get-in-touch">
+            <div class="container">
+                <div class="get-in-touch__inner">
                     <p>
                         Do you like our work principles? Book a free consultation with us!
                     </p>
-                    <div class="get-in-touch__btn">
+                    <div class="get-in-touch__inner__btn">
                         <a class="btn popup-link" href="#popup">
                             get in touch
                         </a>
-                    </div>
+                </div>
                 </div>
             </div>
-        </section>
+        </div>
         <section class="people">
             <div class="container">
-                <h4>
+                <h2>
                     <span class="br">PEOPLE TO</span>
                     <span class="br"> PEOPLE</span>
-                </h4>
+                </h2>
             </div>
             <div class="people__row clearfix container">
                 <p>
@@ -268,14 +288,14 @@
         </section>
         <section class="connect">
             <div class="container">
-                <h4>
+                <h2>
                     <span class="br">Connect</span>
                     <span class="br">with us</span>
-                </h4>
+                </h2>
                 <p>
                     Leave your E-mail and we’ll answer to you as soon as will see your request
                 </p>
-                <form class="connect__form " action="/">
+                <form class="connect__form " action="">
                     <div class="form__left">
                         <div class="input-group">
                             <input onkeyup="checkParams()" class="input" id="name" type="text" required>
@@ -317,7 +337,7 @@
                         </label>
                     </div>
                     <div class="form__btn">
-                        <button id="submit-btn" class="btn" type="submit" disabled>
+                        <button id="submit-btn" class="btn" type="submit" disabled >
                             SUBMIT
                             <span class="long-arrow-right"></span>
                         </button>
@@ -327,7 +347,18 @@
                         </a>
                     </div>
                     <div class="call-us">
-                        or call us <a href="tel:08-30-94-84">08-30-94-84</a>
+                        <div class="visible">
+                            or call us <a href="tel:08-30-94-84">08-30-94-84</a>
+                        </div>
+                        <div class="hidden">
+                            <div>
+                                email us <a href="mailto:info@startupjuristerna.se">info@startupjuristerna.se</a>
+                            </div>
+                            or
+                            <div>
+                                call us <a href="tel:08-30-94-84">08-30-94-84</a>
+                            </div>
+                        </div>
                     </div>
                 </form>
             </div>
@@ -374,7 +405,7 @@
                 </a>
                 <a href="" class="facebook">
                     Facebook
-                    <svg width="6" height="14" viewBox="0 0 6 14" fill="#BBBBBB" xmlns="http://www.w3.org/2000/svg">
+                    <svg width="14" height="14" viewBox="0 0 6 14" fill="#BBBBBB" xmlns="http://www.w3.org/2000/svg">
                         <path d="M6 4.53326H3.95661V3.08023C3.95661 2.53455 4.29018 2.40733 4.52512 2.40733C4.75953 2.40733 5.96712 2.40733 5.96712 2.40733V0.008404L3.9812 0C1.77664 0 1.27495 1.78919 1.27495 2.93418V4.53326H0V7.00522H1.27495C1.27495 10.1776 1.27495 14 1.27495 14H3.95661C3.95661 14 3.95661 10.1399 3.95661 7.00522H5.76613L6 4.53326Z" />
                     </svg>
 
@@ -396,10 +427,10 @@
             </a>
             <section class="connect">
                 <div class="container">
-                    <h4>
+                    <h2>
                         <span class="br">Connect</span>
                         <span class="br">with us</span>
-                    </h4>
+                    </h2>
                     <p>
                         Leave your E-mail and we’ll answer to you as soon as will see your request
                     </p>
@@ -469,11 +500,11 @@
             <a href="#header" class="close close-popup">
                 <span class="esc">Esc</span>
             </a>
-            <div class="thank container">
-                <h4>
+            <div class="thank">
+                <h2>
                     <span class="br">Thank you for the</span>
                     <span class="br">request!</span>
-                </h4>
+                </h2>
                 <picture>
                     <img src="img/main/smile.svg" alt="smile">
                 </picture>

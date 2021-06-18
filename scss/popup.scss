@@ -11,26 +11,22 @@
   overflow-y: auto;
   overflow-x: hidden;
   transition: .4s ease;
-
   &.open{
     opacity: 1;
     visibility: visible;
-
     & .popup__content{
       opacity: 1;
       transform: perspective(600px) translate(0, 0) rotateX(0deg);
     }
   }
-
   &__body{
     height: 100%;
     display: flex;
     align-items: center;
     justify-items: center;
   }
-
   &__content{
-    background-color: white;
+    background-color: $white;
     color: $black;
     width: 100%;
     height: 100%;
@@ -38,25 +34,25 @@
     transition: .4s ease;
     opacity: 0;
     transform: perspective(600px) translate(0, -100%) rotateX(45deg);
-
     & .close{
       position: absolute;
       right: calc(5vw + 32px);
       top: 5vw;
       z-index: 50;
-
+      display: block;
+      width: 50px;
+      height: 50px;
       & span{
-        font: 400 16px/20px "Pontano Sans", sans-serif;
-        color: black;
+        font: 400 1rem/1.2 "Pontano Sans", sans-serif;
+        color: $black;
         position: absolute;
-        bottom: -45px;
+        bottom: 0;
         left: 5px;
       }
     }
   }
-
   & .connect{
-    background-color: white;
+    background-color: $white;
     position: absolute;
     width: 100%;
     top: 50%;
@@ -64,28 +60,22 @@
     padding: 0;
   }
 }
-
 #popup-2 {
-
   .thank span:last-child{
     color: $primary-color;
   }
-
   & .thank {
     position: absolute;
     width: 100%;
     top: 50%;
     transform: translate(0, -50%);
-
-    & h4{
+    & h2{
       text-align: center;
     }
-
     & picture{
       @include adaptiv-img(160, 55);
       display: block;
       margin-top: 68px;
-
       & img{
         width: 100%;
         height: 100%;

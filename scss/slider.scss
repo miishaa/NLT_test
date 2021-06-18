@@ -1,10 +1,8 @@
 
-
 .clients{
   padding: 7vw 0;
-
-  & h4{
-    color: #404040;
+  & h2{
+    color: $black-1;
     margin-bottom: 70px;
     @include adaptiv-font(50, 32);
     @media (max-width:768px) {
@@ -15,19 +13,15 @@
     }
   }
 }
-
 .slider {
   position: relative;
   padding: 0 35px;
-
-
   & img{
     height: auto;
     max-width: 100%;
     width: initial;
     margin: 0 auto;
   }
-
   & .slider__item{
     margin: 0 auto;
   }
@@ -35,8 +29,6 @@
     display: flex;
     align-items: center;
   }
-
-
   & .slick-arrow {
     position: absolute;
     top: 50%;
@@ -45,20 +37,16 @@
     font-size: 0;
     width: 30px;
     height: 30px;
-
     &.slick-prev {
       left: 0;
       background: url("../img/main/clients/icons/l.png") 0 0/100% no-repeat;
     }
-
     &.slick-next {
       right: 0;
       background: url("../img/main/clients/icons/r.png") 0 0/100% no-repeat;
     }
   }
 }
-
-
 @media (max-width: 480px) {
   .slick-slide img {
     display: block;
