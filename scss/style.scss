@@ -55,7 +55,7 @@ body.lock{
   text-align: center;
 }
 @media (max-width: 400px) {
-  main .br, #popup .br, .services h2{
+  main .br, .services h2{
     display: block;
     text-align: left;
   }
@@ -69,7 +69,7 @@ h2 {
 //section banner
 
 .banner {
-  background: url("../img/main/main_background.jpg") center/cover no-repeat;
+  background: url("../img/main_background.jpg") center/cover no-repeat;
   padding: 11vw 0 10vw;
   margin-top: 70px;
   @media (max-width: 767px){
@@ -99,15 +99,22 @@ h2 {
 .services{
   background: $light-gray;
   padding: 5vw 0 7vw;
+  figure{
+    display: flex;
+    flex-direction: column;
+  }
   & h2{
     margin-bottom: 4vw;
   }
   &__row{
     margin-bottom: 20px;
+    display: flex;
+    flex-wrap: wrap;
   }
   &__item{
     padding: 10px;
     float: left;
+    display: flex;
   }
   &__inner{
     background: $white;
@@ -145,7 +152,7 @@ h2 {
       &:after{
         @extend %reset;
         display: block;
-        background: url("../img/main/services/icon/arrow.svg") 0 0 no-repeat;
+        background: url("../img/services/icon/arrow.svg") 0 0 no-repeat;
         width: 10px;
         height: 15px;
         right: calc(50% - 5px);
@@ -158,6 +165,7 @@ h2 {
       margin-bottom: 7px;
       color: black;
       padding-right: 18px;
+      flex: 1 0 auto;
     }
     & span{
       color: $gray;
@@ -407,7 +415,7 @@ h2 {
 
   .check__input:checked + .check__box{
     background-color: $primary-color;
-    background-image: url("../img/main/check.svg");
+    background-image: url("../img/check.svg");
   }
 
   //focused

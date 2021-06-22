@@ -36,8 +36,8 @@
     transform: perspective(600px) translate(0, -100%) rotateX(45deg);
     & .close{
       position: absolute;
-      right: calc(5vw + 32px);
-      top: 5vw;
+      right: 40px;
+      top: 40px;
       z-index: 50;
       display: block;
       width: 50px;
@@ -82,5 +82,18 @@
         object-fit: contain;
       }
     }
+  }
+}
+
+@media (max-width: 550px){
+  #popup .br{
+     display: block;
+     text-align: center;
+  }
+}
+
+@media (max-width: 400px){
+  #popup .br{
+    text-align: left;
   }
 }
